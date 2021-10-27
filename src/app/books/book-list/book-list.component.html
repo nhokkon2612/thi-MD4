@@ -1,0 +1,15 @@
+<form action="" [ngModel]="books"></form>
+<table class="table">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col" colspan="2">Danh sách sách đã đọc</th>
+  </tr>
+  <tr *ngFor="let book of books ;let index as i " >
+    <td>{{book.name}}</td>
+    <div >
+      <td *ngIf="book.read == true ">Đã đọc</td>
+      <td *ngIf="book.read !=true">Chưa đọc</td>
+    </div>
+  </tr>
+  </thead>
+</table>
